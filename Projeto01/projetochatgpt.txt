@@ -1,0 +1,30 @@
+Início
+
+Definir a palavra secreta e inicializar variáveis
+palavra_secreta = escolher_palavra()
+letras_corretas = []
+letras_erradas = []
+vidas = 6
+
+// Loop principal do jogo
+Enquanto vidas > 0 e palavra_secreta não estiver completa:
+    // Mostrar o status do jogo
+    mostrar_status(palavra_secreta, letras_corretas, letras_erradas, vidas)
+    
+    // Pedir ao jogador para adivinhar uma letra
+    letra = pedir_letra()
+    
+    // Verificar se a letra está na palavra secreta
+    Se letra está em palavra_secreta:
+        letras_corretas.adicionar(letra)
+    Senão:
+        letras_erradas.adicionar(letra)
+        vidas = vidas - 1
+
+// Verificar o resultado do jogo
+Se palavra_secreta está completa:
+    Mostrar "Parabéns! Você venceu!"
+Senão:
+    Mostrar "Game over! A palavra era [palavra_secreta]."
+
+Fim
